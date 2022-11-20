@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { PrismaClient } from '@prisma/client';
-import { z } from 'zod';
 
 dotenv.config();
 
@@ -25,11 +24,11 @@ app.get('/cars', async (req, reply) => {
   let cars = await prisma.car.findMany();
 
   if (maxDuration) {
-    cars = cars.filter(car => Number(maxDuration) <= car.maxDuration);
+    cars = cars.filter((car) => Number(maxDuration) <= car.maxDuration);
   }
 
   if (maxDistance) {
-    cars = cars.filter(car => Number(maxDistance) <= car.maxDistance);
+    cars = cars.filter((car) => Number(maxDistance) <= car.maxDistance);
   }
 
   return reply.json({ cars });
