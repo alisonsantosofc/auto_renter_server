@@ -9,7 +9,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const client_1 = require("@prisma/client");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
-const port = process.env.PORT || process.env.MY_LOCAL_PORT;
+const port = process.env.PORT || 3333;
 const prisma = new client_1.PrismaClient({
     log: ['query'],
 });
