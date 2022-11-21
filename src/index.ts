@@ -6,7 +6,7 @@ import { PrismaClient } from '@prisma/client';
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || process.env.LOCAL_PORT;
+const port = process.env.PORT || process.env.MY_LOCAL_PORT;
 
 const prisma = new PrismaClient({
   log: ['query'],
