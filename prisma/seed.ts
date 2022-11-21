@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client';
-import ShortUniqueId from 'short-unique-id';
 
 import cars from './cars.json';
 
